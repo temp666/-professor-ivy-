@@ -1,0 +1,22 @@
+{
+  "name": "professor_ivy",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "binascii": "0.0.2",
+    "cheerio": "^1.0.0-rc.2",
+    "discord.js": "^11.4.2",
+    "file-system": "2.2.2",
+    "mysql": "^2.16.0",
+    "npm": "^6.13.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "description": "Another Discord.js bot",
+  "main": "ivy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Legit Dongo",
+  "license": "ISC"
+}

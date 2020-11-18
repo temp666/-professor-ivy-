@@ -1,0 +1,38 @@
+{
+  "botname": "Professor Ivy",
+  "dbhost": "Your database host name",
+  "dbport": "3306",
+  "dbuser": "Your database user name",
+  "dbpass": "Your database password",
+  "dbname": "Your database name",
+  "discordtoken": "Your discord server token",
+  "adminUserId": "Your user ID here",
+  "forcedChannelId": "ID of the channel you wish to have forced messages on",
+  "newsChannelId": "ID of the channel you wish for news to be posted",
+  "whereIsDatabaseType": "rocketmap or monocle",
+  "whereIsDatabaseName": "the name of your database (schema) associated with the above setting",
+  "whereIsCacheRefresh": "How frequently the cache file should be updated from the database - in minutes",
+  "googleMapsAPIKey": "API key for Google Maps",
+  "roles": [
+    "put", "roles", "that", "are", "available", "to", "be", "auto", "assigned", "here", "Roles", "must", "be", "TitleCase"
+  ],
+  "cleanableChannelsIds": [
+    "Put", "channel", "ids", "here", "that", "you", "want", "to", "be", "able", "to", "be", "cleaned"
+  ],
+  "modules": [
+    "raid", "selfassignrole", "channelclean", "commands", "trade", "whereis"
+  ],
+  "adminmodules": [
+    "commands"
+  ],
+  "runners": [
+    "database", "forced", "pogo-news"
+  ],
+  "welcomemessage": "When the welcome module is enabled, you put in here what you wish to send a person in a PM that joins your server.",
+  "tradetags": [
+    "a list of trade tags, each representing a role on your server that you want your users to search by",
+    "mystic",
+    "instinct",
+    "town name"
+  ]
+}
