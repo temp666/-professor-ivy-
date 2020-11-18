@@ -35,22 +35,21 @@ var forcedCheck = function forcedCheck() {
                         write = true;
                     }
                     else if (parseInt(jsonData.forced.replace(/\./g, '')) < verInt) {
-                        console.log('New version forced! Now on version ' + ver);
+                        console.log('Neue Version erzwungen! Wir sind jetzt bei der Version ' + ver);
                         // Message to channel about new force
                         ivy.client.channels.get(ivy.config.forcedChannelId)
-                            .send('New version forced! We are now on version ' + ver +
-                                '\nThere will be some delay in getting everything set back up.' +
-                                '\nYour patience is appreciated.');
+                            .send('Neue Version erzwungen! Wir sind jetzt bei der Version ' + ver +
+                                    '\nDie Map wird in Kürze wieder funktionieren.');
                         jsonData.forced = ver;
                         write = true;
                     }
                     else if (parseInt(jsonData.forced.replace(/\./g, '')) > verInt){
-                        console.log('Forced version reverted! Back on version ' + ver);
+                        console.log('Die erzwungene Version wurde rückgängig gemacht! Zurück zur Version ' + ver);
                         // Message to channel about reversion
                         ivy.client.channels.get(ivy.config.forcedChannelId)
-                            .send('Forced version reverted! Silly Niantic :)' +
-                                    '\nWe are now on version ' + ver +
-                                    '\nThings shall resume working in a bit.');
+                            .send('Die erzwungene Version wurde rückgängig genommen!' +
+                                    '\nWir sind jetzt bei der Version ' + ver +
+                                    '\nDie Map wird in Kürze wieder funktionieren.');
                         jsonData.forced = ver;
                         write = true;
                     }

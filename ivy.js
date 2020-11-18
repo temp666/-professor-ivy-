@@ -20,7 +20,7 @@ ivy.client.on('ready', () => {
         require('./src/runners/' + ivy.config.runners[i] + '.js')();
     }
 
-    ivy.client.user.setActivity('Type !help for help');
+    ivy.client.user.setActivity('Pokemon');
     console.log(`Running ${ ivy.botname }`);
 });
 
@@ -61,20 +61,6 @@ ivy.client.on('message',  message => {
     ivy.modules.forEach(callback => {
         callback(message, cmd, richEmbed);
     });
-
-    //admin commands
-    if (message.member.hasPermission("ADMINISTRATOR")) {
-        ivy.adminmodules.forEach(callback => {
-            callback(message, cmd, richEmbed);
-        });
-    }
-});
-
-ivy.client.on('guildMemberAdd', (guildMember) => {
-    guildMember.send(
-        `Welcome to ${ guildMember.guild.name }! Please enjoy your stay\n` +
-        ( typeof ivy.config.welcomemessage !== 'undefined' && ivy.config.welcomemessage ? ivy.config.welcomemessage : '')
-    )
 });
 
 ivy.client.login(ivy.config.discordtoken);

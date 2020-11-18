@@ -6,9 +6,9 @@ var pogonews = function pogonews() {
         }
         (function pogoNewsGet() {
             ivy.request({
-                'url': 'https://pokemongolive.com/en/post',
+                'url': 'https://pokemongolive.com/de/post',
                 'headers': {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
                 }
             }).then((e) => {
                 let $ = ivy.cheerio.load(e);
