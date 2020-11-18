@@ -6,7 +6,7 @@ var pogonews = function pogonews() {
         }
         (function pogoNewsGet() {
             ivy.request({
-                'url': 'https://pokemongolive.com/de/post',
+                'url': 'https://pokemongolive.com/post/?hl=de',
                 'headers': {
                     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
                 }
@@ -42,8 +42,7 @@ var pogonews = function pogonews() {
                     else if(newsPosts.length > jsonData.news.length){
                         for(let i = 0; i < newsPosts.length - jsonData.news.length; i++){
                             console.log('New news detected! Posting to news channel: '+newsPosts[i]);
-                            ivy.client.channels.get(ivy.config.newsChannelId)
-                                .send('https://pokemongolive.com'+newsPosts[i]);
+                            ivy.client.channels.get(ivy.config.newsChannelId).send('https://pokemongolive.com'+newsPosts[i]);
                         }
                         jsonData.news = newsPosts;
                         write = true;
@@ -52,8 +51,7 @@ var pogonews = function pogonews() {
                         ivy.fs.writeFile('./cache/main.json', JSON.stringify(jsonData), (err) => {
                             if (err) {
                                 console.log(err);
-                                ivy.client.channels.get(ivy.config.newsChannelId)
-                                    .send('Error saving main cache file. Check log for more details.');
+                                ivy.client.channels.get(ivy.config.newsChannelId).send('Error saving main cache file. Check log for more details.');
                             }
                         });
                     }
